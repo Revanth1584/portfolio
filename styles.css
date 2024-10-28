@@ -1,49 +1,63 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 body {
-    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+#intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f3460;
+    color: #e0e0e0;
+    font-size: 2em;
+}
+.fade-in {
+    animation: fade 5s infinite;
+}
+@keyframes fade {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
 }
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
+    margin-top: -50px;
+    text-align: center;
+}
+.name h1 {
+    font-size: 3em;
+    color: #e94560;
+    animation: nameAnimation 3s ease-in-out infinite;
+}
+.alternate {
+    color: #ffd460;
+}
+@keyframes nameAnimation {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+section {
+    padding: 40px 20px;
     width: 100%;
     max-width: 800px;
-    background-color: #fff;
-    border-bottom: 2px solid #ddd;
 }
-.profile-image img {
+.profile-pic {
     width: 150px;
-    height: 150px;
     border-radius: 50%;
-}
-.intro h1 {
-    font-size: 2.5em;
-    color: #333;
-}
-.intro span {
-    color: #555;
-}
-.portfolio {
-    margin: 40px;
-    width: 100%;
-    max-width: 800px;
+    margin-top: 20px;
 }
 footer {
     margin-top: 20px;
     padding: 10px;
-    background-color: #333;
-    color: #fff;
+    background-color: #162447;
+    color: #e0e0e0;
     text-align: center;
     width: 100%;
 }
