@@ -3,50 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Portfolio</title>
+    <title>Revanth Kaushik - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="intro">
-        <div class="greetings">
-            <p class="fade-in">Hello | Namaste | హలో | Bonjour | Hola | 你好 | 안녕하세요 | مرحبا | Здравствуйте | こんにちは</p>
+    <!-- Initial Greetings -->
+    <div id="greetings" class="greeting-container">
+        <span class="fade-in">Hello</span>
+        <span class="fade-in">नमस्ते</span>
+        <span class="fade-in">హలో</span>
+        <span class="fade-in">Bonjour</span>
+        <span class="fade-in">مرحبا</span>
+    </div>
+
+    <!-- Portfolio Container -->
+    <div id="portfolio">
+        <div class="name-container">
+            <h1 id="name"></h1>
+        </div>
+        <div class="photo-container">
+            <img src="your-photo.jpg" alt="Revanth Kaushik" class="profile-photo">
+        </div>
+        <div class="content-sections">
+            <section id="skills">
+                <h2>Skills</h2>
+                <p>List of skills...</p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <p>List of projects...</p>
+            </section>
+            <!-- Add more sections as needed -->
         </div>
     </div>
 
-    <header>
-        <div class="name">
-            <h1 id="animated-name">Revanth <span class="alternate">Actor | Developer</span></h1>
-        </div>
-    </header>
-    
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I'm Revanth, an actor with a passion for design and development. My journey blends creativity and technology to create immersive experiences.</p>
-        <img src="profile.jpg" alt="Revanth's Profile" class="profile-pic">
-    </section>
-
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project-item">Project 1</div>
-            <div class="project-item">Project 2</div>
-            <div class="project-item">Project 3</div>
-        </div>
-    </section>
-
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML/CSS/JavaScript</li>
-            <li>React.js</li>
-            <li>Design Systems</li>
-            <li>UI/UX Design</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>Connect with me: <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
-    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
