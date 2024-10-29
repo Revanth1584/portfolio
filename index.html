@@ -1,42 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revanth Kaushik - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raskas Revanth Kaushik's Portfolio</title>
+  <style>
+    /* General Styling */
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    /* Intro Animation */
+    .hello-text {
+      font-size: 2rem;
+      color: neon green;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Fading Name Animation */
+    .name {
+      font-size: 2.5rem;
+      color: neon green;
+      text-align: center;
+      animation: fadeInName 3s ease-in-out forwards;
+    }
+
+    @keyframes fadeInName {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Sections */
+    .section {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .section h2 {
+      color: neon green;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+    }
+
+    /* Contact Info */
+    .contact {
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    /* Link Styling */
+    a {
+      color: neon green;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <!-- Initial Greetings -->
-    <div id="greetings" class="greeting-container">
-        <span class="fade-in">Hello</span>
-        <span class="fade-in">नमस्ते</span>
-        <span class="fade-in">హలో</span>
-        <span class="fade-in">Bonjour</span>
-        <span class="fade-in">مرحبا</span>
-    </div>
+  <!-- Hello Animation -->
+  <div class="hello-text" id="helloText"></div>
 
-    <!-- Portfolio Container -->
-    <div id="portfolio">
-        <div class="name-container">
-            <h1 id="name"></h1>
-        </div>
-        <div class="photo-container">
-            <img src="your-photo.jpg" alt="Revanth Kaushik" class="profile-photo">
-        </div>
-        <div class="content-sections">
-            <section id="skills">
-                <h2>Skills</h2>
-                <p>List of skills...</p>
-            </section>
-            <section id="projects">
-                <h2>Projects</h2>
-                <p>List of projects...</p>
-            </section>
-            <!-- Add more sections as needed -->
-        </div>
-    </div>
+  <!-- Name Section -->
+  <div class="name">Raskas Revanth Kaushik</div>
 
-    <script src="script.js"></script>
+  <!-- About Section -->
+  <div class="section">
+    <h2>About Me</h2>
+    <p>Hi, I'm Raskas Revanth Kaushik, a B.Tech CSE first-year student at KGRCET. I'm learning AI and ML, a Python developer, and an aspiring data analyst. I enjoy building impactful solutions and working with innovative technology. Feel free to connect with me!</p>
+  </div>
+
+  <!-- Skills Section -->
+  <div class="section">
+    <h2>Skills</h2>
+    <p>Python, AI, ML, Full-Stack Development</p>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="section">
+    <h2>Connect with Me</h2>
+    <p class="contact">
+      Phone: 9014623823 <br>
+      Email: <a href="mailto:rkrevanth295@gmail.com">rkrevanth295@gmail.com</a> <br>
+      LinkedIn: <a href="https://linkedin.com/yourprofile">LinkedIn Profile</a>
+    </p>
+  </div>
+
+  <script>
+    // Array of "Hello" in different languages
+    const hellos = ["Hello", "नमस्ते", "హలో", "Bonjour", "Hola"];
+    let helloIndex = 0;
+    const helloElement = document.getElementById("helloText");
+
+    function showHello() {
+      helloElement.innerText = hellos[helloIndex];
+      helloElement.style.opacity = 1;
+
+      // Cycle through the hellos array
+      helloIndex = (helloIndex + 1) % hellos.length;
+
+      // Hide and update the hello text
+      setTimeout(() => {
+        helloElement.style.opacity = 0;
+      }, 3000);
+    }
+
+    // Show each "Hello" on load
+    setInterval(showHello, 3500);
+    showHello();
+  </script>
 </body>
 </html>
+
