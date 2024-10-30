@@ -1,49 +1,134 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Revanth Kaushik Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Raskas Revanth Kaushik's Portfolio</title>
+  <style>
+    /* General Styling */
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    /* Hello Typewriter Animation */
+    .hello-text {
+      font-size: 2.2rem;
+      color: #39FF14;
+      margin-top: 50px;
+      height: 3rem;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid #39FF14;
+      animation: typewriter 3s steps(40, end) infinite, blink 0.5s step-end infinite alternate;
+    }
+
+    @keyframes typewriter {
+      0% { width: 0; }
+      50% { width: 100%; }
+      100% { width: 0; }
+    }
+
+    @keyframes blink {
+      from { border-color: #39FF14; }
+      to { border-color: transparent; }
+    }
+
+    /* Fade-In Sections */
+    .fade-section {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section Titles */
+    .section h2 {
+      color: #39FF14;
+      font-size: 1.8rem;
+      margin-top: 20px;
+    }
+
+    /* About Me and Skills */
+    .about, .skills {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.1rem;
+    }
+
+    /* Contact Info */
+    .contact p {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    /* Contact Links */
+    a {
+      color: #39FF14;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1 id="greeting">Hello, Bonjour, नमस्ते, హలో, مرحبا</h1>
-    <h2>I'm <span class="fade-in-text">Revanth Kaushik</span></h2>
-    <h3><span id="dynamic-text"></span></h3>
-    <img src="your-image.jpg" alt="Revanth's photo" class="profile-pic">
-  </header>
+  <!-- Hello Animation -->
+  <div class="hello-text" id="helloText"></div>
 
-  <section id="about">
+  <!-- Name Section -->
+  <div class="fade-section">
+    <h1 style="color: #39FF14;">Raskas Revanth Kaushik</h1>
+  </div>
+
+  <!-- About Section -->
+  <div class="fade-section about">
     <h2>About Me</h2>
-    <p>B.Tech student at KGRCET | Currently interning at IBM</p>
-    <p>Passionate about AI, ML, and Cybersecurity</p>
-  </section>
+    <p>I'm Raskas Revanth Kaushik, a B.Tech CSE first-year student at KGRCET. I'm deeply interested in AI and ML, a Python developer, and an aspiring data analyst. I love exploring technology and creating impactful projects. Feel free to connect with me!</p>
+  </div>
 
-  <section id="skills">
+  <!-- Skills Section -->
+  <div class="fade-section skills">
     <h2>Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>AI & ML</li>
-      <li>Full-stack Development</li>
-      <li>Cybersecurity</li>
-    </ul>
-  </section>
+    <p>Python, AI, ML, Full-Stack Development</p>
+  </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <!-- Add project cards with brief descriptions -->
-  </section>
-
-  <footer>
-    <button onclick="downloadCV()">Download CV</button>
-    <a href="mailto:rkrevanth295@gmail.com">Hire Me</a>
-    <p>Contact: <a href="tel:9014623823">9014623823</a> | 
-       <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> | 
-       <a href="https://x.com/@Revanth_K">@Revanth_K</a>
+  <!-- Contact Section -->
+  <div class="fade-section contact">
+    <h2>Connect with Me</h2>
+    <p>
+      Phone: 9014623823 <br>
+      Email: <a href="mailto:rkrevanth295@gmail.com">rkrevanth295@gmail.com</a> <br>
+      LinkedIn: <a href="https://linkedin.com/yourprofile" target="_blank">LinkedIn Profile</a>
     </p>
-  </footer>
+  </div>
 
-  <script src="scripts.js"></script>
+  <script>
+    // Array of "Hello" in different languages
+    const hellos = ["Hello", "नमस्ते", "హలో", "Bonjour", "Hola"];
+    let helloIndex = 0;
+    const helloElement = document.getElementById("helloText");
+
+    function typeHello() {
+      helloElement.innerText = hellos[helloIndex];
+      helloIndex = (helloIndex + 1) % hellos.length;
+    }
+
+    // Type each "Hello" every 3 seconds
+    setInterval(typeHello, 3000);
+    typeHello();
+  </script>
 </body>
 </html>
+
+ 
