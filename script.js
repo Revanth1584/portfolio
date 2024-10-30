@@ -1,21 +1,46 @@
-// Array of "Hello" in different languages
-const hellos = ["Hello", "नमस्ते", "హలో", "Bonjour", "Hola"];
-let helloIndex = 0;
-const helloElement = document.getElementById("helloText");
+// Sticky Navigation Menu
+let nav = document.querySelector("nav");
+let scrollBtn = document.querySelector(".scroll-button a");
 
-function showHello() {
-  helloElement.innerText = hellos[helloIndex];
-  helloElement.style.opacity = 1;
+// Show/hide sticky navigation and scroll button based on scroll position
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 20) {
+    nav.classList.add("sticky");
+    scrollBtn.style.display = "block";
+  } else {
+    nav.classList.remove("sticky");
+    scrollBtn.style.display = "none";
+  }
+};
 
-  // Cycle through the hellos array
-  helloIndex = (helloIndex + 1) % hellos.length;
+// Side Navigation Menu
+let body = document.querySelector("body");
+let navBar = document.querySelector(".navbar");
+let menuBtn = document.querySelector(".menu-btn");
+let cancelBtn = document.querySelector(".cancel-btn");
 
-  // Hide and update the hello text
-  setTimeout(() => {
-    helloElement.style.opacity = 0;
-  }, 3000);
-}
+// Open side navigation
+menuBtn.onclick = function () {
+  navBar.classList.add("active");
+  menuBtn.style.opacity = "0";
+  menuBtn.style.pointerEvents = "none";
+  body.style.overflow = "hidden";
+  scrollBtn.style.pointerEvents = "none";
+};
 
-// Show each "Hello" on load
-setInterval(showHello, 3500);
-showHello();
+const hideNavMenu = () => {
+  navBar.classList.remove("active");
+  menuBtn.style.opacity = "1";
+  menuBtn.style.pointerEvents = "auto";
+  body.style.overflow = "auto";
+  scrollBtn.style.pointerEvents = "auto";
+};
+
+// Close side navigation
+cancelBtn.onclick = hideNavMenu;
+
+// Close side navigation when a menu link is clicked
+let navLinks = document.querySelectorAll(".menu li a");
+navLinks.forEach((link) => {
+  link.addEventListener("click", hideNavMenu);
+});
