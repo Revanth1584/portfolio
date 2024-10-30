@@ -1,79 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revanth Kaushik's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revanth Kaushik Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Revanth Kaushik's Portfolio</h1>
-        <p>Aspiring Software Engineer | Intern at IBM | B.Tech Student</p>
-    </header>
+  <header>
+    <h1 id="greeting">Hello, Bonjour, नमस्ते, హలో, مرحبا</h1>
+    <h2>I'm <span class="fade-in-text">Revanth Kaushik</span></h2>
+    <h3><span id="dynamic-text"></span></h3>
+    <img src="your-image.jpg" alt="Revanth's photo" class="profile-pic">
+  </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>B.Tech student at KGRCET | Currently interning at IBM</p>
+    <p>Passionate about AI, ML, and Cybersecurity</p>
+  </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a driven and curious individual with a strong foundation in computer science and a keen interest in emerging technologies. My journey in tech has been shaped by my experiences in academic projects, internships, and self-directed learning in machine learning and cybersecurity. I thrive in collaborative environments and enjoy tackling complex challenges.</p>
-    </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>AI & ML</li>
+      <li>Full-stack Development</li>
+      <li>Cybersecurity</li>
+    </ul>
+  </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Programming Languages: Python, Java, C++</li>
-            <li>Machine Learning: TensorFlow, Scikit-learn, Data Analysis</li>
-            <li>Cybersecurity: Network Security, Ethical Hacking, Risk Assessment</li>
-            <li>Tools & Technologies: Git, Docker, AWS, Linux</li>
-            <li>Soft Skills: Teamwork, Problem Solving, Communication</li>
-        </ul>
-    </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <!-- Add project cards with brief descriptions -->
+  </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <h3>Intern - IBM</h3>
-        <p>Date – Present</p>
-        <ul>
-            <li>Contributing to projects involving machine learning algorithms and cybersecurity protocols.</li>
-            <li>Collaborating with cross-functional teams to enhance data security measures.</li>
-        </ul>
-        <h3>Academic Projects</h3>
-        <ul>
-            <li><strong>Machine Learning for Predictive Analytics:</strong> Developed a predictive model using Python to analyze data trends.</li>
-            <li><strong>Cybersecurity Awareness Campaign:</strong> Created an awareness program for peers on best practices for digital safety.</li>
-        </ul>
-    </section>
+  <footer>
+    <button onclick="downloadCV()">Download CV</button>
+    <a href="mailto:rkrevanth295@gmail.com">Hire Me</a>
+    <p>Contact: <a href="tel:9014623823">9014623823</a> | 
+       <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> | 
+       <a href="https://x.com/@Revanth_K">@Revanth_K</a>
+    </p>
+  </footer>
 
-    <section id="education">
-        <h2>Education</h2>
-        <p>B.Tech in Computer Science, KGR College of Engineering and Technology (Expected Graduation: YYYY)</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>I would love to connect with you! Feel free to reach out via the following methods:</p>
-        <ul>
-            <li>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></li>
-            <li>LinkedIn: <a href="YOUR_LINKEDIN_URL" target="_blank">LinkedIn Profile</a></li>
-            <li>Twitter: <a href="https://x.com/@Rkrevanth_K" target="_blank">x.com/@Rkrevanth_K</a></li>
-            <li>Phone: 9014623823</li>
-        </ul>
-        <a href="your_cv_link.pdf" download>Download CV</a>
-    </section>
-
-    <footer>
-        <p>Why Hire Me? I bring a blend of technical skills and a passion for learning that drives me to excel in any role. My internship experience at IBM has provided me with practical insights into the tech industry, and I am eager to apply my knowledge in real-world scenarios. I am committed to continuous improvement and am excited about the opportunity to contribute to your team.</p>
-    </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
-
-  
