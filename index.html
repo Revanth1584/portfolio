@@ -1,163 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raskas Revanth Kaushik's Portfolio</title>
-  <style>
-    /* Background with Geometric Shapes */
-    body {
-      background: linear-gradient(135deg, #000000 25%, #1a1a1a 25%, #1a1a1a 50%, #000000 50%, #000000 75%, #1a1a1a 75%, #1a1a1a 100%);
-      background-size: 50px 50px;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      min-height: 100vh;
-      padding: 0 20px;
-      justify-items: center;
-      text-align: center;
-    }
-
-    /* Hello Animation with Fade Effect */
-    .hello-text {
-      font-size: 2rem;
-      color: #39FF14;
-      margin-top: 20px;
-      animation: fadeIn 3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Main Content Styling */
-    .content {
-      width: 100%;
-      max-width: 800px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 15px;
-      box-shadow: 0px 0px 10px 2px #39FF14;
-      margin-top: 20px;
-    }
-
-    /* Name with Fade-In Animation */
-    .name {
-      font-size: 2.2rem;
-      color: #39FF14;
-      margin: 20px 0;
-      animation: fadeIn 2s ease-out;
-    }
-
-    /* Section Headings */
-    .section h2 {
-      color: #39FF14;
-      font-size: 1.6rem;
-      margin: 10px 0;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #39FF14;
-    }
-
-    /* About Me, Skills, and Contact */
-    .section {
-      margin: 20px 0;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    /* Skill Items with Hover Effect */
-    .skills span {
-      display: inline-block;
-      background-color: #333;
-      color: #39FF14;
-      padding: 8px 12px;
-      margin: 5px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .skills span:hover {
-      background-color: #39FF14;
-      color: #000;
-    }
-
-    /* Contact Links */
-    .contact a {
-      color: #39FF14;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .contact a:hover {
-      color: #ffffff;
-    }
-
-    /* Footer */
-    footer {
-      margin: 20px 0;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revanth Kaushik's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Hello Text with Animation -->
-  <div class="hello-text" id="helloText"></div>
+    <header>
+        <h1>Revanth Kaushik's Portfolio</h1>
+        <p>Aspiring Software Engineer | Intern at IBM | B.Tech Student</p>
+    </header>
 
-  <!-- Main Content Box -->
-  <div class="content">
-    <!-- Name Section -->
-    <div class="name">Raskas Revanth Kaushik</div>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <!-- About Me Section -->
-    <div class="section">
-      <h2>About Me</h2>
-      <p>I'm Raskas Revanth Kaushik, a B.Tech CSE first-year student at KGRCET. I am passionate about AI and ML, a skilled Python developer, and an aspiring data analyst. My goal is to create impactful solutions by leveraging cutting-edge technology. Feel free to connect with me!</p>
-    </div>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a driven and curious individual with a strong foundation in computer science and a keen interest in emerging technologies. My journey in tech has been shaped by my experiences in academic projects, internships, and self-directed learning in machine learning and cybersecurity. I thrive in collaborative environments and enjoy tackling complex challenges.</p>
+    </section>
 
-    <!-- Skills Section -->
-    <div class="section skills">
-      <h2>Skills</h2>
-      <span>Python</span>
-      <span>AI</span>
-      <span>ML</span>
-      <span>Full-Stack Development</span>
-    </div>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Python, Java, C++</li>
+            <li>Machine Learning: TensorFlow, Scikit-learn, Data Analysis</li>
+            <li>Cybersecurity: Network Security, Ethical Hacking, Risk Assessment</li>
+            <li>Tools & Technologies: Git, Docker, AWS, Linux</li>
+            <li>Soft Skills: Teamwork, Problem Solving, Communication</li>
+        </ul>
+    </section>
 
-    <!-- Contact Section -->
-    <div class="section contact">
-      <h2>Connect with Me</h2>
-      <p>
-        Phone: 9014623823 <br>
-        Email: <a href="mailto:rkrevanth295@gmail.com">rkrevanth295@gmail.com</a> <br>
-        LinkedIn: <a href="https://linkedin.com/yourprofile" target="_blank">LinkedIn Profile</a>
-      </p>
-    </div>
-  </div>
+    <section id="experience">
+        <h2>Experience</h2>
+        <h3>Intern - IBM</h3>
+        <p>Date – Present</p>
+        <ul>
+            <li>Contributing to projects involving machine learning algorithms and cybersecurity protocols.</li>
+            <li>Collaborating with cross-functional teams to enhance data security measures.</li>
+        </ul>
+        <h3>Academic Projects</h3>
+        <ul>
+            <li><strong>Machine Learning for Predictive Analytics:</strong> Developed a predictive model using Python to analyze data trends.</li>
+            <li><strong>Cybersecurity Awareness Campaign:</strong> Created an awareness program for peers on best practices for digital safety.</li>
+        </ul>
+    </section>
 
-  <footer>Feel free to connect with me for opportunities and collaborations.</footer>
+    <section id="education">
+        <h2>Education</h2>
+        <p>B.Tech in Computer Science, KGR College of Engineering and Technology (Expected Graduation: YYYY)</p>
+    </section>
 
-  <script>
-    // "Hello" Text Animation in Different Languages
-    const hellos = ["Hello", "नमस्ते", "హలో", "Bonjour", "Hola"];
-    let helloIndex = 0;
-    const helloElement = document.getElementById("helloText");
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>I would love to connect with you! Feel free to reach out via the following methods:</p>
+        <ul>
+            <li>Email: <a href="mailto:your_email@example.com">your_email@example.com</a></li>
+            <li>LinkedIn: <a href="YOUR_LINKEDIN_URL" target="_blank">LinkedIn Profile</a></li>
+            <li>Twitter: <a href="https://x.com/@Rkrevanth_K" target="_blank">x.com/@Rkrevanth_K</a></li>
+            <li>Phone: 9014623823</li>
+        </ul>
+        <a href="your_cv_link.pdf" download>Download CV</a>
+    </section>
 
-    function changeHello() {
-      helloElement.innerText = hellos[helloIndex];
-      helloIndex = (helloIndex + 1) % hellos.length;
-    }
-
-    // Change "Hello" text every 3 seconds
-    setInterval(changeHello, 3000);
-    changeHello();
-  </script>
+    <footer>
+        <p>Why Hire Me? I bring a blend of technical skills and a passion for learning that drives me to excel in any role. My internship experience at IBM has provided me with practical insights into the tech industry, and I am eager to apply my knowledge in real-world scenarios. I am committed to continuous improvement and am excited about the opportunity to contribute to your team.</p>
+    </footer>
 </body>
 </html>
 
-  
-  
   
