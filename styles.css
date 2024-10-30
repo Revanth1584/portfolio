@@ -1,94 +1,62 @@
-/* Background with Floating Red Shapes */
+/* General Styling */
 body {
-  background: linear-gradient(135deg, #2b2b2b 25%, #1a1a1a 25%, #1a1a1a 50%, #2b2b2b 50%, #2b2b2b 75%, #1a1a1a 75%, #1a1a1a 100%);
-  background-size: 60px 60px;
-  color: #ffffff;
+  background-color: black;
+  color: white;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   margin: 0;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
-  padding: 0 20px;
-  justify-items: center;
-  text-align: center;
-  overflow: hidden;
 }
 
+/* Intro Animation */
 .hello-text {
   font-size: 2rem;
-  color: #ff3b3b;
-  margin-top: 20px;
-  animation: fadeIn 3s ease-in-out, floatText 5s ease-in-out infinite alternate;
+  color: limegreen;
+  text-align: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes floatText {
-  from { transform: translateY(0); }
-  to { transform: translateY(-10px); }
-}
-
-.content {
-  width: 100%;
-  max-width: 800px;
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px 2px #ff3b3b;
-  margin-top: 20px;
-}
-
+/* Fading Name Animation */
 .name {
-  font-size: 2.2rem;
-  color: #ff3b3b;
-  margin: 20px 0;
-  animation: fadeIn 2s ease-out;
+  font-size: 2.5rem;
+  color: limegreen;
+  text-align: center;
+  animation: fadeInName 3s ease-in-out forwards;
 }
 
-.section h2 {
-  color: #ff3b3b;
-  font-size: 1.6rem;
-  margin: 10px 0;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #ff3b3b;
+@keyframes fadeInName {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
+/* Sections */
 .section {
+  text-align: center;
   margin: 20px 0;
-  font-size: 1.1rem;
-  line-height: 1.6;
+}
+.section h2 {
+  color: limegreen;
+  text-transform: uppercase;
+  font-size: 1.5rem;
 }
 
-.skills span {
-  display: inline-block;
-  background-color: #333;
-  color: #ff3b3b;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+/* Contact Info */
+.contact {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
 }
 
-.skills span:hover {
-  background-color: #ff3b3b;
-  color: #000;
-}
-
-.contact a {
-  color: #ff3b3b;
+/* Link Styling */
+a {
+  color: limegreen;
   text-decoration: none;
-  transition: color 0.3s;
 }
-
-.contact a:hover {
-  color: #ffffff;
-}
-
-footer {
-  margin: 20px 0;
-  font-size: 0.9rem;
-  color: #666;
+a:hover {
+  text-decoration: underline;
 }
