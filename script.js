@@ -1,27 +1,13 @@
-const words = ["aspiring AANG", "Learning AI, ML, and Cybersecurity"];
-let i = 0;
-let j = 0;
-let currentWord = "";
-let isDeleting = false;
+// "Hello" Text Animation in Different Languages
+const hellos = ["Hello", "नमस्ते", "హలో", "Bonjour", "Hola"];
+let helloIndex = 0;
+const helloElement = document.getElementById("helloText");
 
-function type() {
-  currentWord = words[i];
-  document.getElementById("dynamic-text").textContent = isDeleting
-    ? currentWord.substring(0, j--)
-    : currentWord.substring(0, j++);
-
-  if (!isDeleting && j === currentWord.length) {
-    setTimeout(() => (isDeleting = true), 1000);
-  } else if (isDeleting && j === 0) {
-    isDeleting = false;
-    i = (i + 1) % words.length;
-  }
-
-  setTimeout(type, isDeleting ? 100 : 200);
+function changeHello() {
+  helloElement.innerText = hellos[helloIndex];
+  helloIndex = (helloIndex + 1) % hellos.length;
 }
 
-function downloadCV() {
-  window.location.href = 'path-to-your-cv.pdf';
-}
-
-document.addEventListener("DOMContentLoaded", type);
+// Change "Hello" text every 3 seconds
+setInterval(changeHello, 3000);
+changeHello();
