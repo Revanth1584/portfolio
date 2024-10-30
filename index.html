@@ -4,104 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raskas Revanth Kaushik's Portfolio</title>
-  <style>
-    /* Background with Geometric Shapes */
-    body {
-      background: linear-gradient(135deg, #000000 25%, #1a1a1a 25%, #1a1a1a 50%, #000000 50%, #000000 75%, #1a1a1a 75%, #1a1a1a 100%);
-      background-size: 50px 50px;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      display: grid;
-      grid-template-rows: auto 1fr auto;
-      min-height: 100vh;
-      padding: 0 20px;
-      justify-items: center;
-      text-align: center;
-    }
-
-    /* Hello Animation with Fade Effect */
-    .hello-text {
-      font-size: 2rem;
-      color: #39FF14;
-      margin-top: 20px;
-      animation: fadeIn 3s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    /* Main Content Styling */
-    .content {
-      width: 100%;
-      max-width: 800px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 15px;
-      box-shadow: 0px 0px 10px 2px #39FF14;
-      margin-top: 20px;
-    }
-
-    /* Name with Fade-In Animation */
-    .name {
-      font-size: 2.2rem;
-      color: #39FF14;
-      margin: 20px 0;
-      animation: fadeIn 2s ease-out;
-    }
-
-    /* Section Headings */
-    .section h2 {
-      color: #39FF14;
-      font-size: 1.6rem;
-      margin: 10px 0;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #39FF14;
-    }
-
-    /* About Me, Skills, and Contact */
-    .section {
-      margin: 20px 0;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    /* Skill Items with Hover Effect */
-    .skills span {
-      display: inline-block;
-      background-color: #333;
-      color: #39FF14;
-      padding: 8px 12px;
-      margin: 5px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-
-    .skills span:hover {
-      background-color: #39FF14;
-      color: #000;
-    }
-
-    /* Contact Links */
-    .contact a {
-      color: #39FF14;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .contact a:hover {
-      color: #ffffff;
-    }
-
-    /* Footer */
-    footer {
-      margin: 20px 0;
-      font-size: 0.9rem;
-      color: #666;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Hello Text with Animation -->
@@ -133,28 +36,14 @@
       <p>
         Phone: 9014623823 <br>
         Email: <a href="mailto:rkrevanth295@gmail.com">rkrevanth295@gmail.com</a> <br>
-        LinkedIn: <a href="https://linkedin.com/yourprofile" target="_blank">LinkedIn Profile</a>
+        LinkedIn: <a href="https://linkedin.com/yourprofile" target="_blank">LinkedIn Profile</a> <br>
+        Twitter: <a href="https://twitter.com/Rkrevanth_K" target="_blank">@Rkrevanth_K</a>
       </p>
     </div>
   </div>
 
   <footer>Feel free to connect with me for opportunities and collaborations.</footer>
 
-  <script>
-    // "Hello" Text Animation in Different Languages
-    const hellos = ["Hello", "नमस्ते", "హలో", "Bonjour", "Hola"];
-    let helloIndex = 0;
-    const helloElement = document.getElementById("helloText");
-
-    function changeHello() {
-      helloElement.innerText = hellos[helloIndex];
-      helloIndex = (helloIndex + 1) % hellos.length;
-    }
-
-    // Change "Hello" text every 3 seconds
-    setInterval(changeHello, 3000);
-    changeHello();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
