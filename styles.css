@@ -1,17 +1,18 @@
 /* General Body Styling */
 body {
-    background-color: #1a1a1a;
+    background-color: #000;  /* Solid black base */
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: radial-gradient(circle, #2d2d2d 1%, #1a1a1a 90%);
-    background-attachment: fixed;
-    background-image: 
-        repeating-linear-gradient(45deg, #333 0%, #333 2%, transparent 2%, transparent 4%),
-        repeating-linear-gradient(135deg, #444 0%, #444 2%, transparent 2%, transparent 4%);
-    opacity: 0.95; /* Slight transparency to add depth */
+    background: 
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.1) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.1) 75%, rgba(255, 255, 255, 0.1)) 0px 0px,
+        linear-gradient(to right, #222 2px, transparent 2px) repeat-x,
+        linear-gradient(to bottom, #222 2px, transparent 2px) repeat-y;
+    background-size: 50px 50px, 50px 50px, 100% 2px, 2px 100%;
+    background-attachment: fixed; /* Keeps background stable */
 }
 
 /* Hello Section */
