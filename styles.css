@@ -1,70 +1,74 @@
-/* Body Styling */
+/* General Body Styling */
 body {
     background-color: black;
     color: white;
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden;
+    background-image: radial-gradient(circle, grey 1%, black 90%);
 }
 
-/* Greeting Section */
-.greeting-container {
-    position: absolute;
-    top: 20px;
+/* Intro Section */
+.intro-container {
     display: flex;
     gap: 20px;
-    opacity: 1;
-    animation: fade-out 3s forwards;
+    animation: fade-out 2.5s forwards;
 }
 
-.fade-in {
+.greeting {
     font-size: 24px;
-    color: neon green;
-    animation: text-fade 3s;
+    color: neon red;
+    opacity: 0;
+    animation: greeting-fade 2.5s forwards;
 }
 
-/* Portfolio Container */
+/* Portfolio Display */
 #portfolio {
     display: none;
     text-align: center;
-    animation: fade-in 1s forwards 3s;
+    width: 80%;
+    animation: fade-in 1s forwards 2.5s;
 }
 
 .name-container h1 {
-    font-size: 3em;
-    color: neon green;
-    letter-spacing: 3px;
+    font-size: 2.5em;
+    color: neon red;
     opacity: 0;
+    display: inline-block;
+    letter-spacing: 3px;
+    animation: float-letter 0.5s ease-out forwards;
 }
 
-/* Photo Container */
-.photo-container img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin: 20px 0;
-    border: 2px solid neon green;
-}
-
-/* Section Styles */
-.content-sections {
-    width: 60%;
-    color: grey;
-}
-
+/* Sections Styling */
 section {
     margin: 20px 0;
 }
 
 h2 {
-    color: neon green;
-    font-size: 1.5em;
+    color: grey;
+    font-size: 1.8em;
 }
 
+.about-me p, .contact p {
+    font-size: 1.1em;
+    color: white;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    color: neon red;
+    font-size: 1.2em;
+}
+
+/* Keyframes */
 @keyframes fade-out {
     to {
         opacity: 0;
@@ -73,15 +77,17 @@ h2 {
 
 @keyframes fade-in {
     to {
+        display: block;
         opacity: 1;
     }
 }
 
-@keyframes name-fade {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+@keyframes greeting-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes float-letter {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
