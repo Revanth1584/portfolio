@@ -7,17 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Initial Greetings -->
-    <div id="intro" class="intro-container">
-        <span class="greeting" id="greeting-1">Hello</span>
-        <span class="greeting" id="greeting-2">Ola</span>
-        <span class="greeting" id="greeting-3">Namaste</span>
+    <!-- Initial Greeting -->
+    <div id="hello-section" class="hello-container">
+        <h1 class="hello">Hello</h1>
     </div>
 
     <!-- Portfolio Content -->
     <div id="portfolio">
         <div class="name-container">
-            <h1 id="name"></h1>
+            <h1 class="name-flash">Revanth Kaushik</h1>
         </div>
         <section class="about-me">
             <h2>About Me</h2>
@@ -38,10 +36,12 @@
             <p>Phone: 9014623823</p>
             <p>LinkedIn: <a href="https://linkedin.com/in/revanth-kaushik">Revanth Kaushik</a></p>
         </section>
+        <div class="actions">
+            <button onclick="scrollToContact()">Hire Me</button>
+            <button onclick="downloadCV()">Download My CV</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
