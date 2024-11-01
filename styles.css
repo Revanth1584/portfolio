@@ -8,20 +8,10 @@ body {
     overflow-x: hidden;
     background: radial-gradient(circle, #2d2d2d 1%, #1a1a1a 90%);
     background-attachment: fixed;
-}
-
-/* Geometric Background */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: repeating-linear-gradient(45deg, #333 0%, #333 2%, transparent 2%, transparent 4%),
-                      repeating-linear-gradient(135deg, #444 0%, #444 2%, transparent 2%, transparent 4%);
-    opacity: 0.15;
-    z-index: -1;
+    background-image: 
+        repeating-linear-gradient(45deg, #333 0%, #333 2%, transparent 2%, transparent 4%),
+        repeating-linear-gradient(135deg, #444 0%, #444 2%, transparent 2%, transparent 4%);
+    opacity: 0.95; /* Slight transparency to add depth */
 }
 
 /* Hello Section */
@@ -45,7 +35,6 @@ body::before {
     padding: 40px;
     text-align: center;
     animation: fade-in 1s forwards 2.5s;
-    background-color: #121212;
     color: #e0e0e0;
 }
 
