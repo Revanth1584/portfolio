@@ -1,17 +1,4 @@
-// Fade out "Hello" and show the portfolio
-document.addEventListener("DOMContentLoaded", function () {
-    setTimeout(() => {
-        document.getElementById("hello-section").style.display = "none";
-        document.getElementById("portfolio").style.display = "block";
-    }, 2500);
-});
+// JavaScript placeholder for future interactivity
+// This script file can be used to add any functionality or animation in the future
 
-// Function to scroll to the contact section
-function scrollToContact() {
-    document.querySelector('.contact').scrollIntoView({ behavior: 'smooth' });
-}
-
-// Mock function to simulate CV download
-function downloadCV() {
-    alert("Downloading CV...");
-}
+console.log("Welcome to Revanth's portfolio!");
