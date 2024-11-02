@@ -3,45 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revanth Kaushik - Portfolio</title>
+    <title>Revanth Kaushik Portfolio</title>
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Initial Greeting -->
-    <div id="hello-section" class="hello-container">
+
+    <!-- Left-Aligned Content Container -->
+    <div class="container">
+        
+        <!-- Floating Hello Text -->
         <h1 class="hello">Hello</h1>
+        
+        <!-- Name with Transition -->
+        <h2 class="neon-header">Raskas Revanth Kaushik</h2>
+
+        <!-- Typing Effect for Aspiring AANG -->
+        <p class="typing-effect">aspiring AANG</p>
+
+        <!-- About Section -->
+        <div class="main-content">
+            <div class="section">
+                <h3 class="neon-header">About Me</h3>
+                <p>Currently a B.Tech student at KGRCET, learning AI, ML, and cybersecurity. I have an internship with IBM and am passionate about full-stack development and Python.</p>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="section">
+                <h3 class="neon-header">Skills</h3>
+                <p>Python, AI, Machine Learning, Full-Stack Development, Cybersecurity</p>
+            </div>
+
+            <!-- Contact Section -->
+            <div class="section">
+                <h3 class="neon-header">Contact Me</h3>
+                <p>Phone: 9014623823<br>Email: rkrevanth295@gmail.com<br>LinkedIn: linkedin.com/in/revanthkaushik</p>
+                <a href="#contact" class="button">Hire Me</a>
+                <a href="#download" class="button">Download CV</a>
+            </div>
+        </div>
+
+        <!-- Connect Message -->
+        <p class="section neon-header" style="font-size: 1.2rem;">Feel free to connect with me!</p>
     </div>
 
-    <!-- Portfolio Content -->
-    <div id="portfolio">
-        <div class="name-container">
-            <h1 class="name-flash">Revanth Kaushik</h1>
-        </div>
-        <section class="about-me">
-            <h2>About Me</h2>
-            <p>B.Tech CSE Student at KGRCET, learning AI, ML, and cybersecurity. Python developer, aspiring data analyst, and actor.</p>
-        </section>
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Python</li>
-                <li>AI & Machine Learning</li>
-                <li>Full-stack Development</li>
-                <li>Data Analysis</li>
-            </ul>
-        </section>
-        <section class="contact">
-            <h2>Contact Me</h2>
-            <p>Email: <a href="mailto:rkrevanth295@gmail.com">rkrevanth295@gmail.com</a></p>
-            <p>Phone: 9014623823</p>
-            <p>LinkedIn: <a href="https://linkedin.com/in/revanth-kaushik">Revanth Kaushik</a></p>
-        </section>
-        <div class="actions">
-            <button onclick="scrollToContact()">Hire Me</button>
-            <button onclick="downloadCV()">Download My CV</button>
-        </div>
+    <!-- Right Corner Professional Touch Elements -->
+    <div class="right-corner">
+        <p>IBM Intern<br>KGRCET Student</p>
     </div>
 
+    <!-- Link to the external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
